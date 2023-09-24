@@ -9,7 +9,7 @@ if (number < 0) number = number * -1;
 
 if ((number < 100) || (number > 1000)) Console.WriteLine("Не корректный ввод.");
 else Console.WriteLine(SecondDigit(number));
-  
+
 int SecondDigit(int num)
 {
     int numDuble = number / 10;
