@@ -6,17 +6,13 @@
 Console.Write("Введите трёхзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 if (number < 0) number = number * -1;
-if (number < 100) Console.WriteLine("Не корректный ввод.");
-if (number > 999) Console.WriteLine("Не корректный ввод.");
-else
-{
-    int SecondDigit(int num)
-    {
-        int numDuble = number / 10;
-        int secondDigit = numDuble % 10;
-        return secondDigit;
-    }
 
-    int result = SecondDigit(number);
-    Console.WriteLine(result);
+if ((number < 100) || (number > 1000)) Console.WriteLine("Не корректный ввод.");
+else Console.WriteLine(SecondDigit(number));
+  
+int SecondDigit(int num)
+{
+    int numDuble = number / 10;
+    int secondDigit = numDuble % 10;
+    return secondDigit;
 }
